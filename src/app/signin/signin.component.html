@@ -44,6 +44,13 @@
                                 <div class="text-center">
                                     <a class="small"routerLink="/signup">Create an Account!</a>
                                 </div>
+                                
+                                <!--latest changes-->
+                                <div class="form-group" *ngIf="errMsg !='' ">
+                                    <div class="alert alert-warning">
+                                        {{errMsg}}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

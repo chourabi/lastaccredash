@@ -26,6 +26,8 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/template/css/sb-admin-2.min.css",
+              "src/assets/template/vendor/fontawesome-free/css/all.min.css",
+              
 
               "src/styles.css"
             ],
@@ -37,7 +39,12 @@
               "src/assets/template/js/sb-admin-2.min.js",
               "src/assets/template/vendor/chart.js/Chart.min.js",
               "src/assets/template/js/demo/chart-area-demo.js",
-              "src/assets/template/js/demo/chart-pie-demo.js"
+              "src/assets/template/js/demo/chart-pie-demo.js",
+              "src/assets/template/vendor/datatables/jquery.dataTables.min.js",
+              "src/assets/template/vendor/datatables/dataTables.bootstrap4.min.js"
+              
+              
+              
 
 
             ]
