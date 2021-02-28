@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   menu = []
 
   pendingsUsers:any = [];
+  username = localStorage.getItem('username');
 
   constructor(private api:ApiService) { }
 
@@ -35,6 +36,21 @@ export class HomeComponent implements OnInit {
         },
         ]
         break;
+
+      case 'PROFFESSOR':
+        this.menu = [
+        {
+          title: "My courses",
+          counter: 0,
+          link: '/home/courses',
+          subMenus: []
+        },
+
+
+        ]
+
+
+        break;  
 
       default:
         break;

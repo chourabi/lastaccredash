@@ -5,13 +5,18 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { PendingUsersComponent } from './pending-users/pending-users.component';
+import { CoursesComponent } from './courses/courses.component';
+import { AddcourseComponent } from './addcourse/addcourse.component';
+
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [DashboardComponent, HomeComponent, PendingUsersComponent],
+  declarations: [DashboardComponent, HomeComponent, PendingUsersComponent, CoursesComponent, AddcourseComponent],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    FormsModule,ReactiveFormsModule
   ]
 })
 export class DashboardModule { }

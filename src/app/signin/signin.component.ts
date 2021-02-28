@@ -34,6 +34,8 @@ export class SigninComponent implements OnInit {
       }else{
         localStorage.setItem('token',data.token);
         localStorage.setItem('role',data.role);
+        localStorage.setItem('username',data.username);
+        
         
          // redirect to main dashboard
 

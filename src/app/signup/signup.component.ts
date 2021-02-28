@@ -17,9 +17,40 @@ export class SignupComponent implements OnInit {
     
     
   })
+
+  roles = [
+    { id : "x", value : "abc" },
+    { id : "x", value : "abcd" },
+    { id : "x", value : "def" },
+    { id : "x", value : "jhi" },
+    
+  ]
+
+  filtredroles = [
+    { id : "x", value : "abc" },
+    { id : "x", value : "abcd" },
+    { id : "x", value : "def" },
+    { id : "x", value : "jhi" },
+    
+  ]
+
+
+
   constructor(private auth:AuthService) { }
 
   ngOnInit(): void {
+  }
+
+
+  filter(e){
+    console.log(e.target.value);
+
+    const q = e.target.value;
+
+    this.filtredroles = this.roles.filter((e)=>{
+      return (  e.value.indexOf(q) != -1  );
+    })
+    
   }
 
   signinNow(){
