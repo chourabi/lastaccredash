@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
+import { AuthService } from 'src/app/auth.service';
 
 
 @Component({
@@ -14,7 +16,7 @@ export class HomeComponent implements OnInit {
   pendingsUsers:any = [];
   username = localStorage.getItem('username');
 
-  constructor(private api:ApiService) { }
+  constructor(private api:ApiService, private auth:AuthService, private router:Router) { }
 
   ngOnInit(): void {
     const role = localStorage.getItem('role');
@@ -107,6 +109,22 @@ export class HomeComponent implements OnInit {
       })
     }
     
+  }
+
+
+
+  logout(){
+    this.auth.logout().subscribe((data:any)=>{
+      console.log(data);
+      if (data.success) {
+        localStorage.clear();
+        // router => signin
+
+        this.router.navigate(['/signin'])
+
+      }
+      
+    })
   }
 
   

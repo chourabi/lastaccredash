@@ -47,6 +47,24 @@ export class AuthService {
   }
 
 
+  logout(){
+    
+
+    const token = localStorage.getItem('token');
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        'Authorization':token
+      })
+    };
+    return this.http.get(environment.apiEndPoint+'/app/signout',
+    httpOptions
+    
+    )
+  
+  }
+
+
 
 
 
